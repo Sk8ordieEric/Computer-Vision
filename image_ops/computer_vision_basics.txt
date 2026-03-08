@@ -1,0 +1,77 @@
+Computer Vision is at it's core is based upon images that are represented
+in their mathematical form. Images are displayed as pixels arranged in a grid
+pattern based on coordinates: standard X & Y axes.
+Each image has a defined shape in computer vision.
+This shape is defined as:
+    1. An image's height in pixels
+    2. An image's width in pixels
+    3. The number of channels the image represents (color scale)
+
+An example of an image shape: shape = (720, 1280, 3)
+                                       720 pixel height
+                                       1280 pixel width
+                                       3 channels of color based upon the colorscale (BGR, RGB, greyscale, etc.)
+                                         (An example of BGR: channel Blue, channel Green, channel Red
+                                          each pixel has an array of values that will determine the color that is
+                                          displayed.)
+                                       Example: a pure red pixel in RGB [255, 0, 0]
+                                       Each color, in standard 8 bit images, can have a value between 0 and 255.
+                                       In binary images pixel value is either 0 or 1, or sometimes 0 or 255.
+                                       In 16 bit images pixel values range from 0 to 65535.
+                                       Each color channel is in essence a 2D matrix composed of the height * width
+                                       Red channel: 720 * 1280
+                                       Green channel: 720 * 1280
+                                       Blue channel: 720 * 1280
+                                       Combine these together to get your full image with the outputted colors.
+An image's dimension: height * width, determines the size of the image in a given frame or window.
+The main difference between 8 bit (1 byte) and 16 bit (2 byte) images are that 16 bit images
+can have much more precision and detail when it comes to displaying the color. Since the range of values is much
+greater the pixels can be adjusted for more granular control of color.
+
+Binary images are in essence black & white images. The 0 value is black (lack of color) and 1, 255 value is white
+(all wavelengths of color).
+
+Python basics for starting with images in Computer Vision:
+    1: Pip install opencv-contrib-python, import cv2
+    2. You will need to define an image path to read an image
+    3. use cv2.imread("your image path") for reading images, image is loaded into memory
+    4. use cv2.imwrite("your location path", "path of image to be written") for
+        writing an image to a directory. Do this after performing an operation on the image
+        resizing.
+    5. To visualize an image, use cv2.imshow("name your window", "image path").
+    6. In addition, you will need to run the cv2.waitKey("time in milliseconds") or use 0
+        to wait indefinitely for any key press.
+    7. To resize an image, use cv2.resize("filename of resized image", tuple of new image shape)
+
+Python basics for videos
+    1. Same installation as for images
+    2. Define the video path in a variable
+    3. call the cv2.VideoCapture("video path variable") to load the video into memory
+    4. with the now video object, you will need to read each frame with video.read()
+    5. this video.read() will return 2 values: a boolean if there is a returned frame
+        and the image in that frame. Usually stored under ret & frame variables
+    6. You need to loop over all the frames now to be able to view it as a video.
+        Use a while loop, initialize the ret variable to True, then use it as the loop
+        variable. The loop will terminate when the ret value is False, meaning the end of the
+        video.
+    7. Inside of the while loop, this is where you call video.read() and store the returned values
+       in ret, frame. Use an if statement like if ret:, otherwise when the video finishes and there
+       is no more frames to return you will get an error message.
+    8. Next call cv2.imshow(frame) to display the current frame in the video capture.
+    9. Now call cv2.waitKey but for the argument to wait is different from an image. Best practice
+        is to find out the frames per second of the video. Example 25 fps. Waitkey() takes the
+        arguments in milliseconds: 1000 milliseconds in a second. 1000 (milliseconds) / 25 (fps) = 40
+        40 milliseconds would be the appropriate time to wait. Other values might show the video being
+        sluggish or skipping frames.
+    10. The video will run as if it's in realtime. Once the ret variable becomes False, the if block
+        will skip and the while loop will stop.
+    11. You should also call video.release() and cv2.destroyAllWindows() after the while loop
+        so that opencv can release the memory it has allocated for the video capture object.
+Image resizing and cropping is performed in a similar manner to image viewing.
+Use the cv2.resize("image path", tuple with new dimensions)
+To crop an image it's similar to slicing a string, use square bracket syntax with : for each axis
+Example   cropped_img = img[120:570, 100:400], be sure to use pixel dimensions that are within the
+overall image's dimensions.
+
+
+

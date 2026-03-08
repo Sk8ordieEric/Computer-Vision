@@ -73,5 +73,11 @@ To crop an image it's similar to slicing a string, use square bracket syntax wit
 Example   cropped_img = img[120:570, 100:400], be sure to use pixel dimensions that are within the
 overall image's dimensions.
 
-
+The default colorspace when images are read with cv2.imread() is the BGR colorspace.
+You can change colorspaces with the cv2.cvtColor("original image", "cv2 color conversion attribute")
+You can change to gray scale from color as well, one thing to remember is that when you change
+to gray scale the image channels go from 3 channels to just 1 channel. Instead of Blue, Green, Red
+you have just one channel of color from black to white.
+For more intuition on this, converting from color to gray scale condenses the information the
+BGR pixels display into just a single channel of pixels. 
 

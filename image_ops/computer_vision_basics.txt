@@ -79,5 +79,25 @@ You can change to gray scale from color as well, one thing to remember is that w
 to gray scale the image channels go from 3 channels to just 1 channel. Instead of Blue, Green, Red
 you have just one channel of color from black to white.
 For more intuition on this, converting from color to gray scale condenses the information the
-BGR pixels display into just a single channel of pixels. 
+BGR pixels display into just a single channel of pixels.
+
+Blurring is another technique in computer vision, it can be used to blur an image or
+remove noise from an image.
+A high level intuition in blurring is that it involves taking averages of pixels in a given
+area and assigning that new averaged value in place of the absolute pixel value that it originally
+had.
+Different blurring functions will apply the blurs slightly differently.
+cv2.blur("loaded image", "kernel size") will apply a standard blur technique to an image.
+The kernel, which is a matrix of numbers representing pixels, size designates
+how many pixels in the given area are going to be averaged and this averaged matrix of pixels
+will also be applied to each kernel size of pixels and the image will be processed with these new
+pixels values. The result will be a blur. Typically the kernel size is an odd number, but not always,
+this is so there is a center pixel number to be averaged, it's essentially a center point for the blur filter.
+The Gaussian blur requires a sigmaX argument, this defines how much the blur is spread out horizontally.
+If a zero value is passed, then cv2 will calculate this manually, otherwise the values inputted will apply.
+Higher values are stronger blur, lower values are less blur.
+Median blur method only takes the img and single k-size, instead of array of k-size values, arguments.
+This method will replace each pixel in the given area with the "median" value of the pixels, instead of
+calculating the average like the other methods.
+
 

@@ -42,6 +42,8 @@ Python basics for starting with images in Computer Vision:
     6. In addition, you will need to run the cv2.waitKey("time in milliseconds") or use 0
         to wait indefinitely for any key press.
     7. To resize an image, use cv2.resize("filename of resized image", tuple of new image shape)
+    8. One thing to keep in mind: whenever a color image is loaded into memory with cv2, cv2 automatically
+       converts the colorspace to BGR.
 
 Python basics for videos
     1. Same installation as for images
@@ -100,4 +102,18 @@ Median blur method only takes the img and single k-size, instead of array of k-s
 This method will replace each pixel in the given area with the "median" value of the pixels, instead of
 calculating the average like the other methods.
 
+Thresholds are useful for certain types of object detection, binary images (black and white) are
+the most common. A binary image makes it easier for object detection and object analysis.
+
+The global threshold method cv2.threshold("img", "threshold value", "max value", "threshold type"
+(typically CV2.THRESHOLD_BINARY)) applies this threshold to the whole image.
+
+The adaptive threshold method cv2.adaptiveThreshold("max value", "adaptive method", "threshold type",
+"block size (needs to be an odd number)", and "constant for threshold equation") will have CV2 automatically apply a threshold
+to the image and it will try to correct the image with different threshold values in
+different areas of the image based on the arguments passed.
+
+There are two types of adaptive thresholds mainly used: Gaussian & mean
+This method will move through the image, like a sliding window across the image, making
+many different thresholds all over the image.
 

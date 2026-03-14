@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc763965-56d9-47d7-a8d4-b300f35a8ffc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/image_ops/computer_vision_basics.txt" beforeDir="false" afterPath="$PROJECT_DIR$/image_ops/computer_vision_basics.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/colorspaces/color_convert.py" beforeDir="false" afterPath="$PROJECT_DIR$/colorspaces/color_convert.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_ops/computer_vision_basics.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_ops/image_crop.py" beforeDir="false" afterPath="$PROJECT_DIR$/image_ops/image_crop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_ops/image_io.py" beforeDir="false" afterPath="$PROJECT_DIR$/image_ops/image_io.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_ops/image_resize.py" beforeDir="false" afterPath="$PROJECT_DIR$/image_ops/image_resize.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/image_ops/video_io.py" beforeDir="false" afterPath="$PROJECT_DIR$/image_ops/video_io.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +34,7 @@
   "keyToString": {
     "Python.color_ops.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/Eric/PycharmProjects/PythonProject1/Computer_Vision/image_ops"
@@ -35,6 +42,10 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Eric\PycharmProjects\PythonProject1\Computer_Vision\image_ops" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Eric\PycharmProjects\PythonProject1\Computer_Vision" />
       <recent name="C:\Users\Eric\PycharmProjects\PythonProject1\Computer_Vision\image_ops" />
     </key>
   </component>

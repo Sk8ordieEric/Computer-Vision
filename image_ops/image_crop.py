@@ -9,3 +9,4 @@ cropped_img = img[120:570, 100:400]
 
 cv2.imshow("image", cropped_img)
 cv2.waitKey(0)
+cv2.destroyAllWindows()

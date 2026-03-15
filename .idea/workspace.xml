@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="bc763965-56d9-47d7-a8d4-b300f35a8ffc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/colorspaces/color_convert.py" beforeDir="false" afterPath="$PROJECT_DIR$/colorspaces/color_convert.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_ops/computer_vision_basics.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_ops/image_crop.py" beforeDir="false" afterPath="$PROJECT_DIR$/image_ops/image_crop.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_ops/image_io.py" beforeDir="false" afterPath="$PROJECT_DIR$/image_ops/image_io.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_ops/image_resize.py" beforeDir="false" afterPath="$PROJECT_DIR$/image_ops/image_resize.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/image_ops/video_io.py" beforeDir="false" afterPath="$PROJECT_DIR$/image_ops/video_io.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/edge_detection/edge_detect.py" beforeDir="false" afterPath="$PROJECT_DIR$/edge_detection/edge_detect.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
